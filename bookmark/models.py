@@ -3,6 +3,7 @@ from django.urls import reverse
 
 class Bookmark(models.Model):
     site_name = models.CharField(max_length = 200)
+    description = models.CharField(max_length = 255, null=True, blank=True)
     url = models.URLField("Site URL")    
 
     def __str__(self,):
